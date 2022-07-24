@@ -287,3 +287,14 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+// add some love
+
+.love{
+  font-family:monospace;
+}
+
+.love .heart{
+  color: red;
+}
