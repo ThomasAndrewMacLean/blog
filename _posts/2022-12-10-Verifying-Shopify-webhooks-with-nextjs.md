@@ -12,7 +12,7 @@ export a config object in our api route, declaring we do not want to use a bodyp
 
 ![_config.yml]({{ site.baseurl }}/images/no bodyparser.png)
 
-```javascript
+```
 import { json, buffer } from "micro";
 ```
 
@@ -26,8 +26,7 @@ We can use this buffer, together with the apps secret and check if it matches th
 ![_config.yml]({{ site.baseurl }}/images/verify webhook.png)
 
 
-
-```javascript
+```
 // Verify incoming webhook.
 function verifyWebhook(payload: any, hmac: any) {
   const message = payload.toString();
