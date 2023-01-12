@@ -3,7 +3,7 @@ layout: post
 title: Kop op een kop.
 ---
 
-This is a simple website (https://kopopeenkop.be) where you can upload a picture. Using AI and tensorflowJS you can remove the background.
+This is a simple website [https://kopopeenkop.be](https://kopopeenkop.be) where you can upload a picture. Using AI and tensorflowJS you can remove the background.
 In the next step you choose the colour of your mug and then it takes you to a shopify checkout page.
 
 Before you did this it sends the image to a Google cloud function that saves the image to a bucket and returns its ID.
