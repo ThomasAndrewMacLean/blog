@@ -3,6 +3,8 @@ layout: post
 title: Upload image to sharepoint.
 ---
 
+Last year I needed to upload images to sharepoint from a react app. I found a lot of examples on how to do this using the old sharepoint API, but not for the new graph API. So I decided to write my own.
+
 # Create an app
 
 To upload files to sharepoint using the new graph API you need to create an app in the Azure portal. This app will be used to authenticate the user and get an access token. This access token will be used to upload the file to sharepoint.
