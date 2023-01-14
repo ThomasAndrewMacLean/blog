@@ -5,7 +5,7 @@ title: Upload image to sharepoint.
 
 Last year I needed to upload images to sharepoint from a react app. I found a lot of examples on how to do this using the old sharepoint API, but not for the new graph API. So I decided to write my own.
 
-# Create an app
+## Create an app
 
 To upload files to sharepoint using the new graph API you need to create an app in the Azure portal. This app will be used to authenticate the user and get an access token. This access token will be used to upload the file to sharepoint.
 Go to [https://portal.azure.com/](https://portal.azure.com/) and register a new app. You will need to add its Application (client) ID
@@ -17,9 +17,9 @@ Lastly you will need to create a client secret (found under Certificates & secre
 
 ![_config.yml]({{ site.baseurl }}/images/uploader_permissions.png)
 
-# Upload image
+## Upload image
 
-## Get your token
+### Get your token
 
 We start by creating a token using the app we created earlier. This token will be used to authenticate the user and give us access to the graph API.
 
@@ -52,9 +52,9 @@ export const getToken = async () => {
 };
 ```
 
-## Create upload session
+### Create upload session
 
-Small images can be uploaded directly to sharepoint, but for bigger images we need to create an uploadsession.
+Small images (up to 5BM I beleave) can be uploaded directly to the sharepointAPI, but for bigger images we need to create an uploadsession.
 
 We need to specify the path to the file we want to upload, the size of the file and the type of the file.
 The driveId can be found using the api to first get all sites and then get the driveId from the site we want to upload to.
@@ -85,7 +85,7 @@ await fetch(
 );
 ```
 
-## Upload file
+### Upload file
 
 Files up to +/- 100MB can be uploaded in one go, but for bigger files we need to upload them in chunks.
 
