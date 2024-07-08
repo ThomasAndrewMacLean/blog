@@ -1,3 +1,8 @@
+---
+layout: post
+title: Interactive demo to show how to style a list of cards using CSS and JS
+---
+
 I made a small demo website that show's how you can style a list of cards and make it snap into space.
 
 The demo can be found [here](https://thomasandrewmaclean.github.io/snappy-scrolly-demo/).
